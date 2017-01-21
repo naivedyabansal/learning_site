@@ -1,0 +1,6 @@
+What are migrations?
+
+Migrations are a way of moving a database from one design, a specific set of tables and columns, to a new one.
+Migrations are reversible, too. The fact that they can be done backwards and forwards is what gives them their name.
+
+url() is a function that constructs a special object that Django uses to join URLs to view functions.
