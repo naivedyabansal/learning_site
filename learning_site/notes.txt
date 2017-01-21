@@ -1,12 +1,42 @@
+'''
 What are migrations?
 Migrations are a way of moving a database from one design, a specific set of tables and columns, to a new one.
 Migrations are reversible, too. The fact that they can be done backwards and forwards is what gives them their name.
+'''
 
 url() is a function that constructs a special object that Django uses to join URLs to view functions.
 
+'''
 Django projects contain multiple Django apps. Each app generally encompasses a specific area of functionality.
-    python manage.py startapp creates the skeleton of an app including the views, models, and tests files.
-    INSTALLED_APPS is a list of all apps that Django should consider installed and active for the current project.
-    These apps will be used to find templates, tests, models, and migrations.
+python manage.py startapp creates the skeleton of an app including the views, models, and tests files.
+INSTALLED_APPS is a list of all apps that Django should consider installed and active for the current project.
+These apps will be used to find templates, tests, models, and migrations.
+python manage.py startapp courses -> command to create new app.
+'''
 
-    TIME_ZONE is the setting for what time zone your server is running in.
+TIME_ZONE is the setting for what time zone your server is running in.
+
+'''
+read about django model fields: https://docs.djangoproject.com/en/1.8/ref/models/fields/
+django.db.models has most of the model functionality you'll use to create models and their fields.
+DateTimeField holds datetime objects.
+CharField holds strings.
+TextField holds an unspecified amount of text.
+'''
+
+'''
+manage.py commands:
+https://docs.djangoproject.com/en/1.8/ref/django-admin/
+python manage.py makemigrations [app] will make the migrations for a specific app.
+python manage.py migrate [app] will run the pending migrations for a specific app.
+If you leave off the app name, any pending migrations for any apps will be run.
+'''
+
+'''
+python manage.py shell opens a Python shell with Django's configuration already loaded.
+Model.save() will save an in-memory instance of a model to the database.
+Model.create() will save an in-memory instance of a model to the database and return the newly-created object.
+Model.filter(attribute=value) will get a QuerySet of all instances of the Model that match the attribute values.
+You can change these values with other comparisons, too, like gte or in. Find out more:
+https://docs.djangoproject.com/en/1.8/topics/db/queries/#retrieving-objects
+'''
