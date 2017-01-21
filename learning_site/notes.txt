@@ -1,6 +1,12 @@
 What are migrations?
-
 Migrations are a way of moving a database from one design, a specific set of tables and columns, to a new one.
 Migrations are reversible, too. The fact that they can be done backwards and forwards is what gives them their name.
 
 url() is a function that constructs a special object that Django uses to join URLs to view functions.
+
+Django projects contain multiple Django apps. Each app generally encompasses a specific area of functionality.
+    python manage.py startapp creates the skeleton of an app including the views, models, and tests files.
+    INSTALLED_APPS is a list of all apps that Django should consider installed and active for the current project.
+    These apps will be used to find templates, tests, models, and migrations.
+
+    TIME_ZONE is the setting for what time zone your server is running in.
