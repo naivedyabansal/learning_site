@@ -45,5 +45,23 @@ You can change these values with other comparisons, too, like gte or in. Find ou
 https://docs.djangoproject.com/en/1.8/topics/db/queries/#retrieving-objects
 '''
 
-RESUME FROM:
-https://teamtreehouse.com/library/first-app-view
+'''
+Django's admin
+python manage.py createsuperuser will create a new superuser, or a user that's allowed to
+log into the admin area with all permissions.
+admin.site.register(Model) will register a model with the default admin site,
+which allows you to edit instances of that model in the admin.
+'''
+
+Templates
+'''
+App-specific templates are best kept in a structure like app_name/templates/app_name because
+Django looks in app directories for a directory named templates and makes those templates automatically available.
+
+{{ and }} are used to mark a variable you want printed out.
+{% and %} mark template tags, or special bits of Python that Django's template engine knows how to run.
+Unlike Jinja2 templates, you can't just run arbitrary Python in a template.
+
+render() turns a request object, a template, and an optional context dictionary into a generated string.
+Dictionary lookup, attribute lookup and list-index lookups are implemented with a dot notation.
+
