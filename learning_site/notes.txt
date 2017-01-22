@@ -65,3 +65,5 @@ Unlike Jinja2 templates, you can't just run arbitrary Python in a template.
 render() turns a request object, a template, and an optional context dictionary into a generated string.
 Dictionary lookup, attribute lookup and list-index lookups are implemented with a dot notation.
 
+Template Inheritance:
+and adding static files to project
