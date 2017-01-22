@@ -33,10 +33,17 @@ If you leave off the app name, any pending migrations for any apps will be run.
 '''
 
 '''
+#Adding instances to pur Course model.
+
 python manage.py shell opens a Python shell with Django's configuration already loaded.
+Model.objects -> points to model manager, class that controls access to the model's instances, for querying the model
 Model.save() will save an in-memory instance of a model to the database.
 Model.create() will save an in-memory instance of a model to the database and return the newly-created object.
+eg -> Course.objects.create(title="DBMS", description = "Learn how to interact with databases")
 Model.filter(attribute=value) will get a QuerySet of all instances of the Model that match the attribute values.
 You can change these values with other comparisons, too, like gte or in. Find out more:
 https://docs.djangoproject.com/en/1.8/topics/db/queries/#retrieving-objects
 '''
+
+RESUME FROM:
+https://teamtreehouse.com/library/first-app-view
