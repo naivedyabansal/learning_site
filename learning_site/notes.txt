@@ -76,5 +76,28 @@ An inline is a smaller form inside of a larger form. The smaller form represents
 StackedInline is an inline where each field takes up the full width of the form. Fields are stacked.
 TabularInline is an inline where each field is part of a single row for the form.
 https://docs.djangoproject.com/en/1.8/ref/contrib/admin/#inlinemodeladmin-objects
+'''
 
+
+'''
+The notation ?P<pk> is a Python extension to the standard regex syntax. It means
+assign the results of this group (bounded by parens) to the variable name inside.
+In this case, assign the regex result to pk.
+
+The use of the "_set" suffix is to reference foreign key relationships in reverse.
+Since Step has a foreign key to Course and is referred to as step.course,
+the reverse relationship is automatically created for you by Django.
+A Course can refer to all Step objects that point to it using the "_set" notation as course.step_set.
+The ".all()" part means all records. It could also have been a filter or a get
+'''
+
+'''
+# Foreign key relation usage in django
+Using the models at the top of this page, for example,
+an Entry object e can get its associated Blog object by accessing the blog attribute: e.blog.
+
+
+Django also creates API accessors for the “other” side of the relationship – the link from the
+related model to the model that defines the relationship.
+For example, a Blog object b has access to a list of all related Entry objects via the entry_set attribute: b.entry_set.all().
 '''
