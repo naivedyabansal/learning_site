@@ -67,3 +67,14 @@ Dictionary lookup, attribute lookup and list-index lookups are implemented with 
 
 Template Inheritance:
 and adding static files to project
+'''
+
+'''
+Adding second model steps
+
+An inline is a smaller form inside of a larger form. The smaller form represents a related record in the database.
+StackedInline is an inline where each field takes up the full width of the form. Fields are stacked.
+TabularInline is an inline where each field is part of a single row for the form.
+https://docs.djangoproject.com/en/1.8/ref/contrib/admin/#inlinemodeladmin-objects
+
+'''
