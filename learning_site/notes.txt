@@ -101,3 +101,16 @@ Django also creates API accessors for the “other” side of the relationship �
 related model to the model that defines the relationship.
 For example, a Blog object b has access to a list of all related Entry objects via the entry_set attribute: b.entry_set.all().
 '''
+
+'''
+Giving 404 messages -> page not found message
+
+get_object_or_404(Model, [selectors]) - Gets an object of Model by using whatever
+selection arguments have been given. For example: get_object_or_404(User, username='kennethlove')
+would try to get a User with an username set to "kennethlove". If that User didn't exist, a 404 error would be raised.
+'''
+
+'''
+blank=True - A field can be blank (not filled in) in the admin and any other forms based on the model.
+default='something' - If no value is supplied for the field, the default 'something' will be put into the record.
+'''
